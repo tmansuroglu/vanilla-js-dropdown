@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build dropdown in most basic way possible</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <label role="combobox" class="js-dropdown-label">
+      <div>Label</div>
+      <input type="text" role="combobox" class="js-dropdown-main-text-input" />
+    </label>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
