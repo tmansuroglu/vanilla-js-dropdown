@@ -7,8 +7,9 @@
 - all js classes should be documented for overriding
 - styles injected with JS should be turned into css class
 - All events should be cleaned up
-- (?) Injection of presentation layer should be dynamic
+- [COMPLETED] Injection of presentation layer should be dynamic
 - There should be loading state
 - There should be disabled state
 - There should be read-only state
 - Dropdown should be accesible
+- handle magic strings
