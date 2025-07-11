@@ -10,6 +10,9 @@ export const handleGeneratorButtonClick = () => {
   const generatorButton = getGeneratorButton();
   const testContainer = getTestContainer();
 
+  // TODO: use mutationobserver to keep track of removed elements
+  // TODO: use weakmap or set to keep track of the element events
+
   generatorButton.addEventListener("click", () => {
     const labelEl = handleCreateLabel();
     // TODO: needs cleanup
