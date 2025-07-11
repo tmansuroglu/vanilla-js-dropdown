@@ -1,3 +1,5 @@
+import { handleCreateOption } from "./create-option.js";
+
 const createListBoxElement = (options) => {
   const { width, top, left, height } = options;
 
@@ -20,7 +22,7 @@ export const handleCreateListBox = (options) => {
 
   // TODO: use mocked data
   for (let i = 0; i < 10; i++) {
-    listBox.appendChild(createOption(i + 1));
+    listBox.appendChild(handleCreateOption(i + 1));
   }
 
   return listBox;

@@ -1,3 +1,4 @@
+import { handleCreateListBox } from "../component-creators/create-list-box.js";
 import { createPresentationLayer } from "../component-creators/create-presentation-layer.js";
 import { getPresentationLayer } from "../selectors/presentation-layer.js";
 import { getTextInput } from "../selectors/text-input-arr.js";
@@ -22,7 +23,7 @@ export const handleTextInputClick = () => {
       const { width, top, height, left } = this.getBoundingClientRect();
 
       getPresentationLayer().appendChild(
-        createDropdownListBox({ width, top, height, left })
+        handleCreateListBox({ width, top, height, left })
       );
     });
   }

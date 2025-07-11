@@ -5,5 +5,5 @@ export const getLabelArr = () => {
     throw new Error("Missing dropdown label element");
   }
 
-  return dropdownLabelArr;
+  return labelArr;
 };

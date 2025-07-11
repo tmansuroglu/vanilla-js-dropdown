@@ -1,8 +1,8 @@
-import { handleDropdownInputClick } from "./event-handlers/dropdown-input-click.js";
-import { handleDropdownLabelClick } from "./event-handlers/dropdown-label-click.js";
+import { handleLabelClick } from "./event-handlers/label-click-handler.js";
+import { handleTextInputClick } from "./event-handlers/text-input-click-handler.js";
 
 addEventListener("load", () => {
   console.info("loaded the page");
-  handleDropdownLabelClick();
-  handleDropdownInputClick();
+  handleLabelClick();
+  handleTextInputClick();
 });
