@@ -26,6 +26,7 @@ const createOption = (text) => {
 export const createDropdownListBox = (options) => {
   const listBox = createListBox(options);
 
+  // TODO: use mocked data
   for (let i = 0; i < 10; i++) {
     listBox.appendChild(createOption(i + 1));
   }
