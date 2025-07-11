@@ -1,4 +1,4 @@
-# Vanilla JS Dropdown
+# Vanilla JS Dropdown
 
 - Dropdown should be re-usable
 - There should be multi and single select
