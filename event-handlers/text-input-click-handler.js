@@ -1,30 +1,28 @@
 import { handleCreateListBox } from "../component-creators/create-list-box.js";
 import { createPresentationLayer } from "../component-creators/create-presentation-layer.js";
 import { getPresentationLayer } from "../selectors/presentation-layer.js";
-import { getTextInput } from "../selectors/text-input-arr.js";
 import { preventBodyScroll } from "../utils/prevent-body-scroll.js";
 import { handlePresentationLayerClick } from "./presentation-layer-click-handler.js";
 
-export const handleTextInputClick = () => {
-  for (let element of getTextInput()) {
-    // TODO: requires cleanup
-    element.addEventListener("click", function (e) {
-      e.stopPropagation();
+export const handleTextInputClick = function (e) {
+  e.stopPropagation();
 
-      console.info("clicked on dropdown input");
+  console.info("clicked on dropdown input");
 
-      // TODO: use class
-      preventBodyScroll();
+  // TODO: use class
+  preventBodyScroll();
 
-      document.body.appendChild(createPresentationLayer());
+  document.body.appendChild(createPresentationLayer());
 
-      handlePresentationLayerClick();
+  const presentationLayer = getPresentationLayer();
 
-      const { width, top, height, left } = this.getBoundingClientRect();
+  presentationLayer.addEventListener("click", handlePresentationLayerClick, {
+    once: true,
+  });
 
-      getPresentationLayer().appendChild(
-        handleCreateListBox({ width, top, height, left })
-      );
-    });
-  }
+  const { width, top, height, left } = this.getBoundingClientRect();
+
+  presentationLayer.appendChild(
+    handleCreateListBox({ width, top, height, left })
+  );
 };

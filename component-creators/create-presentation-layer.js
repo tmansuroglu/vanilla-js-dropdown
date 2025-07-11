@@ -5,8 +5,6 @@ export const createPresentationLayer = () => {
   presentationLayer.className = "js-dropdown-presentation-layer";
 
   // TODO: keep style code in CSS
-  presentationLayer.style.background = "gray";
-  presentationLayer.style.opacity = "0.5";
   presentationLayer.style.top = "0";
   presentationLayer.style.bottom = "0";
   presentationLayer.style.right = "0";
