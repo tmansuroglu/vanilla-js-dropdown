@@ -1,4 +1,4 @@
-export const getDropdownPresentationLayerElement = () => {
+export const getPresentationLayer = () => {
   const dropdownPresentationLayerArr = document.getElementsByClassName(
     "js-dropdown-presentation-layer"
   );
