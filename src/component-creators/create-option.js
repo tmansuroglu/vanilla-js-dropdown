@@ -3,8 +3,7 @@ export const handleCreateOption = (text) => {
   option.role = "option";
   option.tabIndex = "0";
   option.id = crypto.randomUUID();
-
-  // TODO: remove li dot and give left padding
+  option.classList.add("css-listbox-option");
 
   option.textContent = text;
 
