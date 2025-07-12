@@ -1,7 +1,6 @@
 import { handleCreateListBox } from "../component-creators/create-list-box.js";
 import { createPresentationLayer } from "../component-creators/create-presentation-layer.js";
 import { getPresentationLayer } from "../selectors/presentation-layer.js";
-import { preventBodyScroll } from "../utils/prevent-body-scroll.js";
 import { handlePresentationLayerClick } from "./presentation-layer-click-handler.js";
 
 export const handleTextInputClick = function (e) {
@@ -9,7 +8,7 @@ export const handleTextInputClick = function (e) {
 
   console.info("clicked on dropdown input");
 
-  preventBodyScroll();
+  document.body.classList.add("css-disable-overflow");
 
   document.body.appendChild(createPresentationLayer());
 
