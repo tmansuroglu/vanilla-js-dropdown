@@ -7,12 +7,12 @@ import { handleTextInputClick } from "../event-handlers/text-input-click-handler
 // TODO: use mutationobserver to keep track of removed elements
 // TODO: use weakmap or set to keep track of the element events
 
-export const handleCreateDropdown = (appendTarget) => {
+export const handleCreateDropdown = (appendTarget, labelText = "Label") => {
   const labelEl = handleCreateLabel();
   // TODO: needs cleanup
   labelEl.addEventListener("click", handleLabelClick);
 
-  const labelTextEl = handleCreateLabelText("Example");
+  const labelTextEl = handleCreateLabelText(labelText);
 
   const input = handleCreateTextInput();
   // TODO: needs cleanup
