@@ -13,7 +13,8 @@ import { createErrorMessageElement } from "./create-error-message-element.js";
 export const handleCreateDropdown = async (
   appendTarget,
   labelText = "Label",
-  url = "Lorem"
+  url = "Lorem",
+  errorText = "Error"
 ) => {
   const labelEl = handleCreateLabel();
   // TODO: needs cleanup
@@ -26,7 +27,7 @@ export const handleCreateDropdown = async (
   labelEl.appendChild(labelTextEl);
   labelEl.appendChild(inputWrapper);
 
-  const errorMessageEl = createErrorMessageElement();
+  const errorMessageEl = createErrorMessageElement(errorText);
 
   labelEl.appendChild(errorMessageEl);
 

@@ -6,6 +6,7 @@ addEventListener("load", () => {
 
   getCreatorButton().addEventListener("click", async () => {
     const testContainer = getTestContainer();
+    // TODO: needed paremeters: empty message
     await handleCreateDropdown(testContainer);
   });
 });
