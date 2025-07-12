@@ -4,8 +4,8 @@ import { getTestContainer } from "./selectors/test-container.js";
 addEventListener("load", () => {
   console.info("loaded the page");
 
-  getCreatorButton().addEventListener("click", () => {
+  getCreatorButton().addEventListener("click", async () => {
     const testContainer = getTestContainer();
-    handleCreateDropdown(testContainer);
+    await handleCreateDropdown(testContainer);
   });
 });

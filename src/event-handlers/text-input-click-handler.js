@@ -3,7 +3,7 @@ import { createPresentationLayer } from "../component-creators/create-presentati
 import { getPresentationLayer } from "../selectors/presentation-layer.js";
 import { handlePresentationLayerClick } from "./presentation-layer-click-handler.js";
 
-export const handleTextInputClick = function (e) {
+export const handleTextInputClick = function (e, parentThis, data = []) {
   e.stopPropagation();
 
   console.info("clicked on dropdown input");
@@ -18,9 +18,11 @@ export const handleTextInputClick = function (e) {
     once: true,
   });
 
-  const { width, top, height, left } = this.getBoundingClientRect();
+  const { width, top, height, left } = (
+    parentThis || this
+  ).getBoundingClientRect();
 
   presentationLayer.appendChild(
-    handleCreateListBox({ width, top, height, left })
+    handleCreateListBox({ width, top, height, left, data })
   );
 };

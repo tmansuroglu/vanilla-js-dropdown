@@ -1,3 +1,4 @@
+import { createEmptyMessageElement } from "./create-empty-message-element.js";
 import { handleCreateOption } from "./create-option.js";
 
 const createListBoxElement = (options) => {
@@ -18,9 +19,12 @@ const createListBoxElement = (options) => {
 export const handleCreateListBox = (options) => {
   const listBox = createListBoxElement(options);
 
-  // TODO: use mocked data
-  for (let i = 0; i < 10; i++) {
-    listBox.appendChild(handleCreateOption(i + 1));
+  if (options.data.length > 0) {
+    options.data.forEach(({ label, value }) =>
+      listBox.appendChild(handleCreateOption(label, value))
+    );
+  } else {
+    listBox.appendChild(createEmptyMessageElement());
   }
 
   return listBox;
