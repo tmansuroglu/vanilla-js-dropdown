@@ -1,4 +1,8 @@
 export const handleCreateTextInput = () => {
+  const inputWrapper = document.createElement("div");
+
+  inputWrapper.classList.add("css-main-text-input-wrapper");
+
   const textInput = document.createElement("input");
   textInput.type = "text";
   textInput.classList.add(
@@ -7,5 +11,7 @@ export const handleCreateTextInput = () => {
 
   textInput.id = crypto.randomUUID();
 
-  return textInput;
+  inputWrapper.appendChild(textInput);
+
+  return { inputWrapper, input: textInput };
 };
