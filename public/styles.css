@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.css-test-container {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.css-dropdown-listbox {
+  position: absolute;
+  background: red;
+}
+
+.css-presentation-layer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.css-disable-overflow {
+  overflow: hidden;
+}

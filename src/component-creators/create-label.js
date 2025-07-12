@@ -1,7 +1,7 @@
 export const handleCreateLabel = () => {
   const label = document.createElement("label");
   label.role = "combobox";
-  label.className = "js-dropdown-label";
+  label.classList.add("js-dropdown-label");
 
   label.id = crypto.randomUUID();
 

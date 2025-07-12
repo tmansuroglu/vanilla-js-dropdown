@@ -9,7 +9,6 @@ export const handleTextInputClick = function (e) {
 
   console.info("clicked on dropdown input");
 
-  // TODO: use class
   preventBodyScroll();
 
   document.body.appendChild(createPresentationLayer());

@@ -6,10 +6,8 @@ const createListBoxElement = (options) => {
   const listBox = document.createElement("ul");
   listBox.tabIndex = "-1";
   listBox.role = "listbox";
+  listBox.classList.add("css-dropdown-listbox");
 
-  // TODO: keep style code in CSS file
-  listBox.style.position = "absolute";
-  listBox.style.background = "red";
   listBox.style.width = `${width}px`;
   listBox.style.top = `${top + height}px`;
   listBox.style.left = `${left}px`;

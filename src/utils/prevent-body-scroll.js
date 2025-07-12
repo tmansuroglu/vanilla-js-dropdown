@@ -1,3 +1,3 @@
 export const preventBodyScroll = () => {
-  document.body.style.overflow = "hidden";
+  document.body.classList.add("css-disable-overflow ");
 };
