@@ -1,4 +1,3 @@
-import { getPresentationLayer } from "../selectors/presentation-layer.js";
 import { allowBodyScroll } from "../utils/allow-body-scroll.js";
 
 export const handlePresentationLayerClick = function () {
